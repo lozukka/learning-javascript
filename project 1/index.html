@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 1</title>
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
@@ -16,14 +15,24 @@
         <p>This would change celsius to farenheit.</p>
       </section>
       <section>
-        <h2>Can I have a temperature?</h2>
+        <h2>Can I have a Celsius temperature?</h2>
         <input type="number" id="celsiusInput" placeholder="Enter Celsius" />
-        <button id="convertButton">Convert to Farenheit</button>
-        <p>That is <span id="result"></span> Farenheit</p>
+        <button id="convertFahrenheit">Convert to Farenheit</button>
+        <p>That is <span id="resultF">0</span> Farenheit</p>
+      </section>
+      <section>
+        <h2>Can I have a Fahrenteit temperature?</h2>
+        <input
+          type="number"
+          id="fahrenheitInput"
+          placeholder="Enter Fahrenheit"
+        />
+        <button id="convertCelsius">Convert to Celsius</button>
+        <p>That is <span id="resultC">0</span> Celsius</p>
       </section>
     </main>
     <footer>
-      <p>&copy; 2024 Project 1. All rights reserved.</p>
+      <p>&copy; 2025 Project 1. All rights reserved.</p>
     </footer>
     <script src="script.js" defer></script>
   </body>
