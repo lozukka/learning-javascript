@@ -15,3 +15,12 @@ I learned:
 - how to read <input> values
 - how to print to DOM
 - variables and function
+
+# Project 2: A simple calculator
+
+I learned:
+
+- how to change <input> values to numbers
+- if & else if & else structure
+- also eventlistener!
+- how to debug script when it doesn't work
