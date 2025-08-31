@@ -1,19 +1,26 @@
-console.log("Hello World");
 //variables, submit button
 let calculateBtn = document.getElementById("calculate");
 
-//do the math, eventlistener, function
-//remember not to divide by 0
+//eventlistener, function
 calculateBtn.addEventListener("click", (event) => {
-  let num1 = document.getElementById("num1").value;
-  let num2 = document.getElementById("num2").value;
+  //switch input values to numbers
+  let num1 = Number(document.getElementById("num1").value);
+  let num2 = Number(document.getElementById("num2").value);
   let operator = document.getElementById("operation").value;
   let result = 0;
-  //show the result
-  if (operator === "add") {
-    result = 20;
+  //do the math
+  //remember not to divide by 0
+  if (operator === "divide" && num2 == 0) {
+    document.getElementById("error").innerHTML = "You can't divide by 0!";
+  } else if (operator === "divide") {
+    result = num1 / num2;
+  } else if (operator === "add") {
+    result = num1 + num2;
+  } else if (operator === "subtract") {
+    result = num1 - num2;
   } else {
-    result = 50;
+    result = num1 * num2;
   }
+  //show the result
   document.getElementById("result").innerHTML = result;
 });
