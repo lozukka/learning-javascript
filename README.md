@@ -25,7 +25,7 @@ I learned:
 - also eventlistener!
 - how to debug script when it doesn't work
 
-# Project 2: A click counter
+# Project 3: A click counter
 
 I learned:
 
