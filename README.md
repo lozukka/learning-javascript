@@ -24,3 +24,11 @@ I learned:
 - if & else if & else structure
 - also eventlistener!
 - how to debug script when it doesn't work
+
+# Project 2: A click counter
+
+I learned:
+
+- this was kindof refresh project, where I needed to do again some basic things that I did in project 1 and 2
+- add 1 to value
+- manipulate the DOM
