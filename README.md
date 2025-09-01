@@ -41,3 +41,12 @@ Then I asked ChatGPT to a script. Oh boy, I learned a lot.
 - I added a function that gives a different greeting at different times of the day.
 - I added a function that trims and normalize given text.
   -I wrote the submit event listener a little different this time.
+
+# Project 5: A coin flip
+
+I first coded this project on my own and then asked ChatGPT for a solution. 
+I learned:
+- Math.random and Math.floor
+I added after AI:
+- stats block
+I have noticed that it is easier to plan the javascript logic than at the beginning. 
