@@ -50,3 +50,11 @@ I learned:
 I added after AI:
 - stats block
 I have noticed that it is easier to plan the javascript logic than at the beginning. 
+
+# Project 6: Multiply Table
+
+I don't know why, but this consept was very hard to understand, visualize and plan. I used ChatGPT as a mentor for this. I felt a major leap in learning with this project.
+I learned:
+- how to plan functions (keep it simple and short!)
+- for-loops
+- how to use AI as a mentor and teacher
