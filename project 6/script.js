@@ -68,14 +68,21 @@ function buildContentRows(n) {
   // jokaiselle riville <tr>
   // ensimmäinen solu = kerroin
   // seuraavat solut = kertolaskujen tulokset
-  const tableRow = document.createElement("tr");
+  for(let rowNum = 1; rowNum<=n; rowNum++){
+    const tableRow = document.createElement("tr");
+    const headerCell = document.createElement("th");
+    headerCell.textContent = rowNum;
+    tableRow.appendChild(headerCell);
 
-  for(let i=0; i<=n; i++){
+    for(let i=1; i<=n; i++){
     const tableData = document.createElement("td");
-    tableData.textContent = i * n; 
+    tableData.textContent = i * rowNum; 
     tableRow.appendChild(tableData);
   }
   resultTable.appendChild(tableRow);
+  }
+  
+  
 }
 
 // 7. Näytä varoitusviesti
