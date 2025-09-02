@@ -8,9 +8,20 @@
 </head>
 <body>
     <header><h1>Guess the number</h1></header>
-    <main></main>
+    <main>
+        <form>
+        <label for="userinput">Give a number 0-100</label>
+        <input type="number" name="userinput" id="userinput">
+        <button id="guess">Guess</button>
+        <button id="clear">Clear</button>
+        </form>
+        <div>
+            <p id="result"></p>
+            <p id="warning"></p>
+        </div>
+    </main>
     <footer><p>2025 learning Javascript</p></footer>
     
 </body>
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </html>
