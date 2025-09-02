@@ -69,3 +69,10 @@ I learned:
 
 After AI:
 - I added !isNaN(input) to validation. I know I don't needed it because the form input type is number, but I may need it in future.
+
+# Project 7: Character counter
+
+I learned:
+- how to read user input in real time
+- how to count characters
+- how to change color with javascript
