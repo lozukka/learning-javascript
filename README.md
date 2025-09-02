@@ -84,3 +84,15 @@ I learned:
 - a function to create a random color
 
 Overall very proud of this little project
+
+# Project 10: Password checker
+
+I learned:
+- how to check strings:
+    if (/[A-Z]/.test(password)); Big letters
+
+    if (/[0-9]/.test(password)); Numbers
+
+    if (/[^A-Za-z0-9]/.test(password)); Special characters
+
+This project felt difficult. It was very hard to get started.
