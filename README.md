@@ -59,3 +59,13 @@ I learned:
 - how to plan functions (keep it simple and short!)
 - for-loops
 - how to use AI as a mentor and teacher
+
+# Project 7: Guess the Number
+
+Even tho this was a little bit bigger project, it felt easy.
+I learned:
+- structure the script better
+- plan the functions (one main function, other small helper functions)
+
+After AI:
+- I added !isNaN(input) to validation. I know I don't needed it because the form input type is number, but I may need it in future.
