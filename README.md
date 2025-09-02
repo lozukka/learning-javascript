@@ -96,3 +96,10 @@ I learned:
     if (/[^A-Za-z0-9]/.test(password)); Special characters
 
 This project felt difficult. It was very hard to get started.
+
+# Project 11: Timer
+
+I learned:
+- setInterval and clearInterval
+- I also did a version where the timer start at local time
+
