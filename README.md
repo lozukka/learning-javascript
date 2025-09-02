@@ -47,6 +47,7 @@ Then I asked ChatGPT to a script. Oh boy, I learned a lot.
 I first coded this project on my own and then asked ChatGPT for a solution. 
 I learned:
 - Math.random and Math.floor
+
 I added after AI:
 - stats block
 I have noticed that it is easier to plan the javascript logic than at the beginning. 
