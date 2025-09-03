@@ -14,6 +14,7 @@ const rightAnswers = ["4", "7", "8"]
 
   } else {
     console.log("Et valinnut mitään.");
+    resultText.textContent = "You didn't answer any questions."
   }
 }
 
