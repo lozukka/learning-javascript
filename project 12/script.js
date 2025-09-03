@@ -1,19 +1,13 @@
-console.log("hellooo")
 let resultText = document.getElementById("result");
 
 function checkAnswer() {
   
-  const selected = [document.querySelector('input[name="q1"]:checked')?.value, document.querySelector('input[name="q2"]:checked')?.value, document.querySelector('input[name="q3"]:checked')?.value] ;
-const rightAnswers = ["4", "7", "8"]
-  if (selected) {
-    console.log("You chose:", selected);
-    let score = 0;
-
-    checkScore(selected, rightAnswers);
+    const selected = [document.querySelector('input[name="q1"]:checked')?.value, document.querySelector('input[name="q2"]:checked')?.value, document.querySelector('input[name="q3"]:checked')?.value] ;
+    const rightAnswers = ["4", "7", "8"]
+  if (selected.every(answer => answer !== undefined)) {
+    let score = checkScore(selected, rightAnswers);
     showResult(score);
-
   } else {
-    console.log("No answer.");
     resultText.textContent = "You didn't answer any questions."
   }
 }

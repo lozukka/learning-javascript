@@ -103,3 +103,10 @@ I learned:
 - setInterval and clearInterval
 - I also did a version where the timer start at local time
 
+# Project 12: Small quiz
+
+I learned:
+- you can call functions from HTML-side
+- I tried foreach-loop for the first time
+- array from radio-buttons
+- how to compare two arrays
