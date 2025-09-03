@@ -27,16 +27,12 @@ function addToCart(name, price) {
   removeBtn.style.color = "red";
 
   removeBtn.onclick = function () {
-    // 1. Poista DOM:ista
     li.remove();
 
-    // 2. Poista cart-taulukosta
     cart = cart.filter((item) => !(item.name === name && item.price === price));
 
-    // 3. Tallenna uusi cart localStorageen
     saveCart();
 
-    // 4. Päivitä summa
     addTotal();
   };
 
@@ -52,9 +48,9 @@ function addTotal() {
 function loadCart() {
   const saved = localStorage.getItem("cartItems");
   if (saved) {
-    cart = JSON.parse(saved); // korvaa cart suoraan tallennetulla
+    cart = JSON.parse(saved);
     cart.forEach((cartItem) => addToCart(cartItem.name, cartItem.price));
-    addTotal(); // laskee summan cartista
+    addTotal();
   }
 }
 
