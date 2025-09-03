@@ -11,14 +11,14 @@
     <main>
         <p>Choose your favorite Web language:</p>
 
-            <form>
-            <input type="radio" id="html" name="fav_language" value="HTML">
-            <label for="html">HTML</label><br>
-            <input type="radio" id="css" name="fav_language" value="CSS">
-            <label for="css">CSS</label><br>
-            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-            <label for="javascript">JavaScript</label>
-            </form>
+            <form id="quiz">
+  <p>1. Mikä on 2 + 2?</p>
+  <label><input type="radio" name="q1" value="3"> 3</label>
+  <label><input type="radio" name="q1" value="4"> 4</label>
+  <label><input type="radio" name="q1" value="5"> 5</label>
+
+  <button type="button" onclick="checkAnswer()">Tarkista</button>
+</form>
         <p id="result"></p>
     </main>
     <footer>2025 Learning Javascript</footer>
