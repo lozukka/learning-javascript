@@ -44,18 +44,21 @@ Then I asked ChatGPT to a script. Oh boy, I learned a lot.
 
 # Project 5: A coin flip
 
-I first coded this project on my own and then asked ChatGPT for a solution. 
+I first coded this project on my own and then asked ChatGPT for a solution.
 I learned:
+
 - Math.random and Math.floor
 
 I added after AI:
+
 - stats block
-I have noticed that it is easier to plan the javascript logic than at the beginning. 
+  I have noticed that it is easier to plan the javascript logic than at the beginning.
 
 # Project 6: Multiply Table
 
 I don't know why, but this consept was very hard to understand, visualize and plan. I used ChatGPT as a mentor for this. I felt a major leap in learning with this project.
 I learned:
+
 - how to plan functions (keep it simple and short!)
 - for-loops
 - how to use AI as a mentor and teacher
@@ -64,15 +67,18 @@ I learned:
 
 Even tho this was a little bit bigger project, it felt easy.
 I learned:
+
 - structure the script better
 - plan the functions (one main function, other small helper functions)
 
 After AI:
+
 - I added !isNaN(input) to validation. I know I don't needed it because the form input type is number, but I may need it in future.
 
 # Project 8: Character counter
 
 I learned:
+
 - how to read user input in real time
 - how to count characters
 - how to change color with javascript
@@ -80,6 +86,7 @@ I learned:
 # Project 9: Background color-switcher
 
 I learned:
+
 - classList.toggle
 - a function to create a random color
 
@@ -88,24 +95,27 @@ Overall very proud of this little project
 # Project 10: Password checker
 
 I learned:
+
 - how to check strings:
-    if (/[A-Z]/.test(password)); Big letters
+  if (/[A-Z]/.test(password)); Big letters
 
-    if (/[0-9]/.test(password)); Numbers
+  if (/[0-9]/.test(password)); Numbers
 
-    if (/[^A-Za-z0-9]/.test(password)); Special characters
+  if (/[^A-Za-z0-9]/.test(password)); Special characters
 
 This project felt difficult. It was very hard to get started.
 
 # Project 11: Timer
 
 I learned:
+
 - setInterval and clearInterval
 - I also did a version where the timer start at local time
 
 # Project 12: Small quiz
 
 I learned:
+
 - you can call functions from HTML-side
 - I tried foreach-loop for the first time
 - array from radio-buttons
@@ -114,10 +124,19 @@ I learned:
 # Project 13: Show all the days of one month
 
 I learned:
+
 - played around date API
 
 # Project 14: To do
 
 I learned
+
 - how to use localstorage
 - how to validate text
+
+# Project 15: Shopping cart
+
+I learned
+
+- how to use localstorage with array objects
+- got more familiar with localstorage
