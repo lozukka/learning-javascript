@@ -8,6 +8,17 @@
 </head>
 <body>
     <header><h1>To do!</h1></header>
+    <main>
+        <form id="add-task">
+            <label for="addtask">What you should do? <input type="text" id="addtask" name="addtask"></label>
+            <button type="button" onclick="addTask()">Add task</button>
+        </form>
+        <section>
+           <h2>Tasks</h2> 
+           <ul id="list-of-tasks"></ul>
+        </section>
+    </main>
+    <footer><p>2025 Learning Javascript</p></footer>
 </body>
 <script src="script.js" defer></script>
 </html>
