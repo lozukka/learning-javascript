@@ -110,3 +110,14 @@ I learned:
 - I tried foreach-loop for the first time
 - array from radio-buttons
 - how to compare two arrays
+
+# Project 13: Show all the days of one month
+
+I learned:
+- played around date API
+
+# Project 14: To do
+
+I learned
+- how to use localstorage
+- how to validate text
