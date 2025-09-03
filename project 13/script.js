@@ -12,7 +12,7 @@ function checkDates(){
     
     if(validateUserInput(userMonth, userYear)){
         let result = findRightDays(userMonth, userYear);
-        showResults(result);
+        showResults(result, userMonth, userYear);
     };
     
 }
@@ -21,23 +21,24 @@ function checkDates(){
 //validate input
 function validateUserInput(userMonth, userYear){
     if(userMonth<=12 && userMonth>0){
-        if(userYear<0){
-            true;
-        } else{false;}
-    } else{false;}
+        if(userYear>0 && userYear<275760){
+            return true;
+        } else{return false;}
+    } else{return false;}
 }
 
 //find right days
 function findRightDays(userMonth, userYear){
-    let howManyDays = new Date(userYear, userMonth, 0);
+    let rightDate = new Date(userYear, userMonth, 0);
+    let howManyDays = rightDate.getDate();
+    console.log(howManyDays);
     return howManyDays;
 }
 
 //show results
 function showResults(result, userMonth, userYear){
-    
         const unordedList = document.createElement("ul");
-        for (let day=0; day<=result; day++){
+        for (let day=1; day<=result; day++){
         const listItem = document.createElement("li");
         listItem.textContent = day;
         unordedList.appendChild(listItem);
