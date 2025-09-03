@@ -7,26 +7,44 @@ let sum = 0;
 function addItem(name, price) {
   cart.push({ name, price });
 
-  addToCart(name);
-  saveCartItem(name, price);
-  addTotal(price);
+  addToCart(name, price);
+  saveCart();
+  addTotal();
   console.log(cart);
 }
 
-function saveCartItem(name, price) {
-  const saved = localStorage.getItem("cartItems");
-  const cartItems = saved ? JSON.parse(saved) : [];
-  cartItems.push({ name, price });
-  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+function saveCart() {
+  localStorage.setItem("cartItems", JSON.stringify(cart));
 }
 
-function addToCart(n) {
+function addToCart(name, price) {
   const li = document.createElement("li");
-  li.textContent = n;
+  li.textContent = `${name} - ${price}€`;
+
+  const removeBtn = document.createElement("span");
+  removeBtn.textContent = " ❌";
+  removeBtn.style.cursor = "pointer";
+  removeBtn.style.color = "red";
+
+  removeBtn.onclick = function () {
+    // 1. Poista DOM:ista
+    li.remove();
+
+    // 2. Poista cart-taulukosta
+    cart = cart.filter((item) => !(item.name === name && item.price === price));
+
+    // 3. Tallenna uusi cart localStorageen
+    saveCart();
+
+    // 4. Päivitä summa
+    addTotal();
+  };
+
+  li.appendChild(removeBtn);
   itemList.appendChild(li);
 }
 
-function addTotal(p) {
+function addTotal() {
   sum = cart.reduce((total, item) => total + item.price, 0);
   sumDisplay.textContent = `Total: ${sum}€`;
 }
@@ -34,12 +52,9 @@ function addTotal(p) {
 function loadCart() {
   const saved = localStorage.getItem("cartItems");
   if (saved) {
-    const tasks = JSON.parse(saved);
-    tasks.forEach((cartItem) => {
-      cart.push(cartItem); // lisää takaisin cartiin
-      addToCart(cartItem.name); // näytä listassa
-    });
-    addTotal(0); // laskee koko summan uudestaan cartista
+    cart = JSON.parse(saved); // korvaa cart suoraan tallennetulla
+    cart.forEach((cartItem) => addToCart(cartItem.name, cartItem.price));
+    addTotal(); // laskee summan cartista
   }
 }
 
