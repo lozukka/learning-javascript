@@ -1,14 +1,12 @@
-//variables
 let listOfTasks = document.getElementById("list-of-tasks");
 let warning = document.getElementById("warningtext");
 
-//main funktion
+
 function addTask(){
     let input = document.getElementById("addtask").value;
-    //validate & get user input
+    
     const result = validateTask(input);
         if(result.valid){
-        //lisää ja tulosta listaan
             addTasktoList(input);
             saveTask(input);
             document.getElementById("addtask").value = "";
@@ -19,10 +17,10 @@ function addTask(){
 }
 
 function clearList(){
-    localStorage.clear();
+    localStorage.clear("tasks");
     listOfTasks.textContent ="";
 }
-//helper functions
+
 function validateTask(input) {
   const text = input.trim();
 
@@ -35,7 +33,6 @@ function validateTask(input) {
   return { valid: true, message: "" };
 }
 
-// Tallenna uusi tehtävä localStorageen
 function saveTask(input) {
   const saved = localStorage.getItem("tasks");
   const tasks = saved ? JSON.parse(saved) : [];
@@ -43,14 +40,24 @@ function saveTask(input) {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
-//Lisää tehtävät listaan
 function addTasktoList(input){
     const listItem = document.createElement("li");
     listItem.textContent = input;
+
+    const removeBtn = document.createElement("span");
+    removeBtn.textContent = "❌"
+    removeBtn.style.cursor = "pointer";
+    removeBtn.style.color = "red";
+    removeBtn.onclick = function() {
+        listItem.remove();
+        let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+        tasks = tasks.filter(task => task !== input);
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+    };
+    listItem.appendChild(removeBtn);
     listOfTasks.appendChild(listItem);
 }
 
-// Lataa tehtävät localStoragesta (jos niitä on)
 function loadTasks() {
   const saved = localStorage.getItem("tasks");
   if (saved) {
@@ -59,5 +66,4 @@ function loadTasks() {
   }
 }
 
-// Kun sivu latautuu, lataa vanhat tehtävät näkyviin
 window.onload = loadTasks;
