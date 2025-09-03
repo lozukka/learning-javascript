@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 15</title>
-    <link rel="icon" href="../favicon.png">
-</head>
-<body>
+    <link rel="icon" href="../favicon.png" />
+  </head>
+  <body>
     <header><h1>Shopping cart simulation</h1></header>
     <main>
-        <section id="shop">
-<h2>The shop</h2>
-<ul>
-    <li>Apple 1€ <button type="button" onclick="addApple()">Add</button></li>
-    <li>Juice 2€ <button id="juice">Add</button></li>
-    <li>Bread 4€ <button id="bread">Add</button></li>
-    <li>Chicken 6€ <button id="chicken">Add</button></li>
-</ul>
-        </section>
-        <section id="shopping-cart">
-<h2>Shopping cart</h2>
-<ul id="item-list"></ul>
-<h3 id="sum-text"></h3>
-        </section>
+      <section id="shop">
+        <h2>The shop</h2>
+        <ul>
+          <li>
+            Apple 1€ <button type="button" onclick="addApple()">Add</button>
+          </li>
+          <li>Juice 2€ <button id="juice" onclick="addJuice()">Add</button></li>
+          <li>Bread 4€ <button id="bread" onclick="addBread()">Add</button></li>
+          <li>
+            Chicken 6€ <button id="chicken" onclick="addChicken()">Add</button>
+          </li>
+        </ul>
+      </section>
+      <section id="shopping-cart">
+        <h2>Shopping cart</h2>
+        <ul id="item-list"></ul>
+        <h3 id="sum-text"></h3>
+      </section>
     </main>
     <footer><p>2025 learning Javascript</p></footer>
-    
-</body>
-<script src="script.js" defer></script>
+  </body>
+  <script src="script.js" defer></script>
 </html>
